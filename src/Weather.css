@@ -1,3 +1,48 @@
+footer {
+  font-size: 12px;
+}
+.Weather {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #d3e3f7;
+}
+.searchInput {
+  width: 70%;
+}
+.searchButton {
+  width: 25%;
+  margin-left: 5px;
+}
 .city {
-  color: blue;
+  font-size: 48px;
+  letter-spacing: 10px;
+}
+.temperature-box {
+  max-width: 400px;
+  gap: 20px;
+  justify-self: center;
+  font-size: 80px;
+}
+.Weather .inner-box {
+  width: 160px;
+}
+.temperature-unit-display {
+  font-size: 60px;
+}
+.cityConditions {
+  border-radius: 10px;
+
+  justify-content: center;
+  font-size: 12px;
+}
+.cityConditions ul {
+  padding: 10px;
+  list-style-type: none;
+}
+.conditions-icon {
+  font-size: 20px;
+}
+.conditions-unit {
+  font-size: 8px;
+  font-weight: 600;
 }
