@@ -1,10 +1,28 @@
-footer {
-  font-size: 12px;
+form input {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #efefef;
+  color: #0777a8;
+}
+.Weather h1 {
+  margin: 12px 0 0 0;
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: 1.5;
+}
+.Weather .condition-description {
+  margin-bottom: 0;
+  opacity: 0.8;
+  line-height: 1;
+}
+.searchButton {
+  font-weight: 550;
 }
 .Weather {
   max-width: 500px;
   margin: 0 auto;
-  color: #d3e3f7;
+  color: #f6f8fb;
 }
 .searchInput {
   width: 70%;
@@ -18,31 +36,46 @@ footer {
   letter-spacing: 10px;
 }
 .temperature-box {
-  max-width: 400px;
-  gap: 20px;
+  max-width: 250px;
   justify-self: center;
   font-size: 80px;
 }
 .Weather .inner-box {
   width: 160px;
 }
-.temperature-unit-display {
-  font-size: 60px;
+.temperature-unit {
+  position: relative;
+  top: -30px;
+  font-size: 30px;
 }
-.cityConditions {
-  border-radius: 10px;
-
+.Weather .row {
+  margin: 0 50px;
   justify-content: center;
+  border-radius: 30px;
+  color: #2383ac;
   font-size: 12px;
+  font-weight: 700;
 }
-.cityConditions ul {
-  padding: 10px;
-  list-style-type: none;
+.Weather .col-1 {
+  background-color: rgb(211, 227, 247, 0.75);
 }
 .conditions-icon {
-  font-size: 20px;
+  font-size: 16px;
 }
 .conditions-unit {
-  font-size: 8px;
+  font-size: 6px;
   font-weight: 600;
+}
+.Weather ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.conditions-box-left {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.conditions-box-right {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }

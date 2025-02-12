@@ -11,57 +11,50 @@ export default function Weather() {
           type="search"
           placeholder="Enter a city.."
           className="searchInput"
+          autoFocus="on"
         />
         <input type="submit" value="Search" className="searchButton" />
       </form>
       <h1 className="city">Tokyo</h1>
+      <p className="condition-description">Mostly Cloudy</p>
+
       <div className="d-flex temperature-box">
         <div className="inner-box">🌥️</div>
         <div className="inner-box">
-          28<span className="temperature-unit-display">°C</span>
+          28<span className="temperature-unit">°C</span>
         </div>
       </div>
 
-      <h5>Mostly Cloudy</h5>
-      <div className="row cityConditions">
-        <ul className="col-1 m-0 p-0">
-          <li className="conditions-icon">☂️</li>
-          <li>
-            15<span className="conditions-unit">%</span>
-          </li>
-        </ul>
-        <ul className="col-1 m-0 p-0">
-          <li className="conditions-icon">💧</li>
-          <li>
-            45<span className="conditions-unit">%</span>
-          </li>
-        </ul>
-        <ul className="col-1 m-0 p-0">
-          <li className="conditions-icon">💨</li>
-          <li>
-            12<span className="conditions-unit">km/h</span>
-          </li>
-        </ul>
+      <div>
+        <div className="row">
+          <ul className="col-1 pt-1 pb-2 conditions-box-left">
+            <li className="conditions-icon">{""}</li>
+            <li>{""}</li>
+          </ul>
+          <ul className="col-1 pt-1 pb-2">
+            <li className="conditions-icon">☂️</li>
+            <li>
+              15<span className="conditions-unit">%</span>
+            </li>
+          </ul>
+          <ul className="col-1 pt-1 pb-2">
+            <li className="conditions-icon">💧</li>
+            <li>
+              45<span className="conditions-unit">%</span>
+            </li>
+          </ul>
+          <ul className="col-1 pt-1 pb-2">
+            <li className="conditions-icon">💨</li>
+            <li>
+              12<span className="conditions-unit">km/h</span>
+            </li>
+          </ul>
+          <ul className="col-1 pt-1 pb-2 conditions-box-right">
+            <li className="conditions-icon">{""}</li>
+            <li>{""}</li>
+          </ul>
+        </div>
       </div>
-      <footer>
-        Project coded by{" "}
-        <a
-          href="https://lj-fryer.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LJ Fryer
-        </a>
-        . Open-sourced on{" "}
-        <a
-          href="https://github.com/LJ-Fryer/react-weather"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
-        .
-      </footer>
     </div>
   );
 }
