@@ -3,6 +3,7 @@ import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import { Audio } from "react-loader-spinner";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,6 +13,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.city,
+      date: new Date(response.data.time * 1000),
       temperature: Math.round(response.data.temperature.current),
       wind: Math.round(response.data.wind.speed),
       condition: response.data.condition.description,
@@ -24,7 +26,10 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <p>Tuesday 5:05pm</p>
+        <p>
+          {" "}
+          <FormattedDate date={weatherData.date} />
+        </p>
         <form action="">
           <input
             type="search"
