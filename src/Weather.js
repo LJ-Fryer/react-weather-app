@@ -4,8 +4,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import { Audio } from "react-loader-spinner";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -22,6 +24,20 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    const apiKey = "2394045tebc4f1e4ea3820407e9abod9";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -29,68 +45,20 @@ export default function Weather(props) {
           {" "}
           <FormattedDate date={weatherData.date} />
         </p>
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <input
             type="search"
             placeholder="Enter a city.."
             className="searchInput"
+            onChange={handleCityChange}
           />
           <input type="submit" value="Search" className="searchButton" />
         </form>
-        <h1 className="city">{weatherData.city}</h1>
-        <p className="condition-description text-capitalize">
-          {weatherData.condition}
-        </p>
-
-        <div className="d-flex temperature-box">
-          <div className="inner-box">
-            <img src={weatherData.iconUrl} alt={weatherData.iconAlt} />
-          </div>
-          <div className="inner-box">
-            {weatherData.temperature}
-            <span className="temperature-unit">°C</span>
-          </div>
-        </div>
-
-        <div>
-          <div className="row">
-            <ul className="col-1 pt-1 pb-2 conditions-box-left">
-              <li className="conditions-icon">{""}</li>
-              <li>{""}</li>
-            </ul>
-            <ul className="col-1 pt-1 pb-2">
-              <li className="conditions-icon">☂️</li>
-              <li>
-                15<span className="conditions-unit">%</span>
-              </li>
-            </ul>
-            <ul className="col-1 pt-1 pb-2">
-              <li className="conditions-icon">💧</li>
-              <li>
-                {weatherData.humidity}
-                <span className="conditions-unit">%</span>
-              </li>
-            </ul>
-            <ul className="col-1 pt-1 pb-2">
-              <li className="conditions-icon">💨</li>
-              <li>
-                {weatherData.wind}
-                <span className="conditions-unit">km/h</span>
-              </li>
-            </ul>
-            <ul className="col-1 pt-1 pb-2 conditions-box-right">
-              <li className="conditions-icon">{""}</li>
-              <li>{""}</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
-    const apiKey = "2394045tebc4f1e4ea3820407e9abod9";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return (
       <div className="d-flex justify-content-center">
         <Audio
