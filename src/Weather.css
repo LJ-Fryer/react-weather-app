@@ -38,15 +38,15 @@ form input {
 .temperature-box {
   max-width: 250px;
   justify-self: center;
-  font-size: 80px;
+  font-size: 70px;
 }
-.Weather .temperature-inner-box {
+.Weather .WeatherTemperature {
   width: 160px;
 }
-.temperature-unit {
+.unit {
   position: relative;
-  top: -30px;
-  font-size: 30px;
+  top: -32px;
+  font-size: 20px;
 }
 .Weather .row {
   margin: 0 50px;
