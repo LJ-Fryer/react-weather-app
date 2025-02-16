@@ -9,7 +9,10 @@ form input {
   margin: 12px 0 0 0;
   font-size: 56px;
   font-weight: 600;
-  font-stretch: 1.5;
+}
+.Weather a {
+  color: #c49bc2;
+  text-decoration: none;
 }
 .Weather .condition-description {
   margin-bottom: 0;
@@ -31,10 +34,7 @@ form input {
   width: 25%;
   margin-left: 5px;
 }
-.city {
-  font-size: 48px;
-  letter-spacing: 10px;
-}
+
 .temperature-box {
   max-width: 250px;
   justify-self: center;
