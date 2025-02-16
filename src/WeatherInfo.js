@@ -9,10 +9,10 @@ export default function WeatherInfo(props) {
       </p>
 
       <div className="d-flex temperature-box">
-        <div className="inner-box">
+        <div className="temperature-inner-box">
           <img src={props.data.iconUrl} alt={props.data.iconAlt} />
         </div>
-        <div className="inner-box">
+        <div className="temperature-inner-box">
           {props.data.temperature}
           <span className="temperature-unit">°C</span>
         </div>

@@ -40,7 +40,7 @@ form input {
   justify-self: center;
   font-size: 80px;
 }
-.Weather .inner-box {
+.Weather .temperature-inner-box {
   width: 160px;
 }
 .temperature-unit {
