@@ -5,11 +5,11 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
-      <p className="mt-2 condition-description text-capitalize">
-        {props.data.condition}
+      <div className="mt-2 justify-content-center condition-description">
+        <span className="text-capitalize">{props.data.condition}</span>{" "}
         <span>💧 {props.data.humidity}%</span>{" "}
         <span>💨 {props.data.wind}km/h</span>
-      </p>
+      </div>
 
       <div className="d-flex mt-2 mb-2 temperature-box">
         <div className="temperature-inner-box">
