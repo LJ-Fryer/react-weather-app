@@ -6,8 +6,7 @@ export default function WeatherForecast() {
     <div className="WeatherForecast">
       <div className="row">
         <div className="col-2">
-          <div className="row-styling-top" />
-          <div className="WeatherForecast-day">Tue</div>
+          <div className="pt-3 WeatherForecast-day">Tue</div>
           <div className="mt-1 mb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,11 +19,10 @@ export default function WeatherForecast() {
             </svg>
           </div>
           <div />
-          <div className="WeatherForecast-temperatures">
+          <div className="pb-3 WeatherForecast-temperatures">
             <span className="WeatherForecast-temperature-max">24°</span>
             <span className="WeatherForecast-temperature-min">14°</span>
           </div>
-          <div className="row-styling-bottom" />
         </div>
       </div>
     </div>
