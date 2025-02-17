@@ -11,12 +11,13 @@ form input {
   font-weight: 600;
 }
 .Weather a {
-  color: #c49bc2;
+  color: #f4434c;
   text-decoration: none;
 }
 .Weather .condition-description {
   margin-bottom: 0;
   opacity: 0.8;
+  font-size: 16px;
   line-height: 1;
 }
 .searchButton {

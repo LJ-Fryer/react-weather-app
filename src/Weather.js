@@ -5,6 +5,7 @@ import axios from "axios";
 import { Audio } from "react-loader-spinner";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -55,6 +56,7 @@ export default function Weather(props) {
           <input type="submit" value="Search" className="searchButton" />
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
