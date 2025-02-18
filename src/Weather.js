@@ -28,6 +28,7 @@ export default function Weather(props) {
   function search() {
     const apiKey = "2394045tebc4f1e4ea3820407e9abod9";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -56,7 +57,7 @@ export default function Weather(props) {
           <input type="submit" value="Search" className="searchButton" />
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast city={city} />
       </div>
     );
   } else {
