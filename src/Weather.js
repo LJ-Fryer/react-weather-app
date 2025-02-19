@@ -25,19 +25,19 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
-    const apiKey = "2394045tebc4f1e4ea3820407e9abod9";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "2394045tebc4f1e4ea3820407e9abod9";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
