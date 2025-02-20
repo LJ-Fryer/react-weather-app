@@ -1,5 +1,5 @@
-.WeatherForecast .col-2 {
-  width: 80px;
+.WeatherForecast .col {
+  width: 60px;
   border-top-left-radius: 18px;
   border-bottom-right-radius: 18px;
   background-color: rgb(239, 239, 239, 0.7);
@@ -9,7 +9,7 @@
 }
 
 .WeatherForecast .WeatherForecast-temperatures {
-  font-size: 13px;
+  font-size: 15px;
   color: #f65281;
   font-weight: 600;
 }
