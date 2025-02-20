@@ -57,7 +57,7 @@ export default function Weather(props) {
           <input type="submit" value="Search" className="searchButton" />
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast city={city} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
