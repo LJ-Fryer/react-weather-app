@@ -12,7 +12,7 @@ function App() {
           <a
             href="https://lj-fryer.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             LJ Fryer
           </a>
@@ -20,7 +20,7 @@ function App() {
           <a
             href="https://github.com/LJ-Fryer/react-weather"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>{" "}
@@ -28,7 +28,7 @@ function App() {
           <a
             href="https://ljf-weather-app.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Netlify
           </a>
