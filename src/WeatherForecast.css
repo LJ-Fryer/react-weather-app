@@ -1,4 +1,13 @@
-.WeatherForecast .col {
+.WeatherForecast .row {
+  margin: 0 50px;
+  justify-content: center;
+  border-radius: 30px;
+  color: #2383ac;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.WeatherForecast .forecast-day {
   max-width: 80px;
   border-top-left-radius: 18px;
   border-bottom-right-radius: 18px;
@@ -6,17 +15,4 @@
   color: #0c6086;
   font-size: 16px;
   text-align: center;
-}
-
-.WeatherForecast .WeatherForecast-temperatures {
-  font-size: 15px;
-  color: #f65281;
-  font-weight: 600;
-}
-.WeatherForecast-temperature-min {
-  margin-left: 5px;
-  opacity: 0.75;
-}
-.WeatherForecastDay img {
-  width: 64px;
 }

@@ -1,0 +1,14 @@
+.WeatherTemperature {
+  max-width: 160px;
+}
+
+.WeatherTemperature .unit {
+  position: relative;
+  top: -32px;
+  font-size: 20px;
+}
+
+.WeatherTemperature a {
+  color: #f4434c;
+  text-decoration: none;
+}

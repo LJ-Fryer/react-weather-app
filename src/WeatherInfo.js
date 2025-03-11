@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,7 +13,7 @@ export default function WeatherInfo(props) {
       </div>
 
       <div className="d-flex mt-2 mb-2 temperature-box">
-        <div className="temperature-inner-box">
+        <div>
           <img src={props.data.iconUrl} alt={props.data.iconAlt} />
         </div>
         <WeatherTemperature celsius={props.data.temperature} />
